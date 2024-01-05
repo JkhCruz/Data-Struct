@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.books;
+
+/**
+ *
+ * @author COMLAB101
+ */
+import java.util.Scanner;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.LinkedList;
+
+
+public class Books {
+    public static void main(String[] args) {
+        Queue book = new LinkedList <String> ();
+        Stack <String> Title = new Stack <> ();
+        Scanner user = new Scanner(System.in);
+        System.out.println("Enter four book titles.");
+        int b = 4;
+        for(int i=1; i <= b;i++){
+            System.out.print("Book " + i + ": ");
+            String Enter = user.nextLine();
+            Title.push(Enter);
+        }
+        for(int i=1; i <= b; i++){
+            book.offer(Title.pop());
+        }
+        System.out.println("New order of books:");
+        System.out.println(book);
+    }
+}
+

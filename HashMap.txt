@@ -1,0 +1,56 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.programs;
+
+/**
+ *
+ * @author COMLAB101
+ */
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+/**
+ *
+ * @author johnp
+ */
+public class Programs {
+
+    public static void main(String[] args) {
+      
+        Map<String, String> programs = new HashMap<>();
+        
+        
+        programs.put("BSIT", "Bachelor Of Science in Information Technology");
+        programs.put("BSCS", "Bachelor Of Science in Computer Science");
+        programs.put("BSIS", "Bachelor Of Sceience in Information Systems");
+        
+            System.out.println("Program List : "); 
+            String thirdKey = "BSIT";
+            for( String key : programs.keySet()){
+                System.out.println(key + " " + programs.get(key));
+                thirdKey = key;
+            }
+        
+            programs.remove("BSIT");
+        
+            System.out.println("\nNew Program List: ");
+            
+            programs.put(" ", " ");
+            
+            for(Map.Entry e : programs.entrySet()){
+                    
+                    System.out.println(e.getKey() + " " + e.getValue());
+                    
+            }
+            
+            System.out.println("The Program Does Not Contain BSCpE");
+            
+            
+  
+        }
+    }

@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class User {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        
+        System.out.println("User enters first number: ");
+        int user1  = sc.nextInt();
+        
+        System.out.println("User enters second number: ");
+        int user2 = sc.nextInt();
+        
+        if(user1 > user2){
+            
+            System.out.println("Your first number is greather than " + user2 );
+        
+            
+        }else if (user1 == user2){
+        
+            System.out.println( "is equal to second number");
+        
+        
+          } else{
+            System.out.println("Your second number is less than to " + user1 );
+        }
+        
+       
+        
+       
+        
+    }
+}

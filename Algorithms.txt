@@ -1,0 +1,53 @@
+
+playerHealth = 100
+playerDamage = 20
+playerLevel = 1
+
+
+bossHealth = 200
+bossDamage = 40
+
+
+function battle(enemyHealth, monsterDamage):
+    while playerHealth > 0 and monsterHealth > 0:
+        
+        enemyHealth -= playerDamage
+        if enemyHealth <= 0:
+            print("Monster defeated!")
+            break
+        
+        
+        playerHealth -= monsterDamage
+        if playerHealth <= 0:
+            print("Player defeated!")
+            return false
+
+    return true
+
+
+for level in 1 to 4:
+    print("Entering Level " + level)
+    
+    monsterHealth = 50 + (level * 25)
+    monsterDamage = 10 + (level * 5)
+    
+    if battle(monsterHealth, monsterDamage):
+        print("Level " + level + " cleared!")
+        playerLevel += 1
+        playerHealth += 20
+        playerDamage += 10
+    else:
+        print("Game over. Retry")
+        break
+
+if playerLevel == 5:
+    print("You have reached the Final Boss!")
+    print("Prepare to face the final boss!")
+
+    
+    if battle(bossHealth, bossDamage):
+        print("Congratulations! You won the game!")
+    else:
+        print("Game over. Retry")
+
+end

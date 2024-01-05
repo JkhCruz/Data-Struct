@@ -1,0 +1,64 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.fruitbasket;
+
+/**
+ *
+ * @author COMLAB101
+ */
+
+import java.util.Stack;
+import java.util.Scanner;
+
+public class FruitBasket {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in); 
+       Stack <String> Fruits = new Stack<>();
+     
+      System.out.println("Catch and eat any of these fruits: ('Apple', 'Orange', 'Mango', 'Guava') ");
+      System.out.println("How many fruits would you like to catch? ");
+      int fruit = Integer.parseInt(sc.nextLine());
+      System.out.println("Choose a fruit to catch. Press A, O, M or G:");
+      
+      for(int i=1;i<=fruit;i++){
+          
+      System.out.println("fruit " + fruit + " of " + " 4 ");
+      
+      char Fruit = sc.next().charAt(0);
+      
+      
+      if(Fruit == 'A' || Fruit == 'a'){
+          Fruits.push("Apple");
+      }
+      else if (Fruit == 'O' || Fruit == 'o'){
+           Fruits.push("Orange");
+      }
+      else if (Fruit == 'M' || Fruit == 'm'){
+          Fruits.push("Mango");
+      }
+      else if (Fruit == 'G' || Fruit == 'g'){
+          Fruits.push("Guava");
+      }
+      }
+    System.out.println("Your basket now has: " + fruit);
+    for (int n=1; n<=fruit;n++){
+        System.out.println("Press E to eat the fruit: ");
+        char kain = sc.next().charAt(0);
+        Fruits.pop();
+        System.out.println("Fruits in the basket: " + Fruits);
+        
+        if(Fruits.empty()){
+            System.out.println("No more fruits");
+            Fruits.size();
+        }
+        
+        
+    }
+        
+    }     
+     
+    }

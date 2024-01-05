@@ -1,0 +1,45 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.greetings;
+
+/**
+ *
+ * @author COMLAB101
+ */
+
+import java.util.Scanner;
+import java.util.PriorityQueue;
+public class Greetings {
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+     PriorityQueue<String>Names = new PriorityQueue<String>();
+   
+   
+     System.out.println("Enter the nicknames of 4 of your classmates: ");
+  
+    
+     for (int i = 1; i <= 4; i++) {
+     Names.add(sc.nextLine());
+       
+   }
+    
+    System.out.println("Press H to say Hi to each of them.");
+    while(!Names.isEmpty()){
+       System.out.println(Names.remove()+""); 
+       String Hi = sc.nextLine();
+       
+       if (Hi.equalsIgnoreCase("")) {
+                Names.poll();
+                System.out.println( Names);
+       }
+    
+        }
+    if (Names.isEmpty()) {
+            System.out.println("Done saying Hi ");
+         }
+    }
+}

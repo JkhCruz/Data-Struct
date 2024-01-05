@@ -1,0 +1,55 @@
+
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class HandsOn3 {
+
+    public static void main(String[] args) {
+        
+        LinkedList<String> Song = new LinkedList<String>();
+        LinkedList<String> Album = new LinkedList<String>();
+        LinkedList<String> Artist = new LinkedList<String>();
+        
+        Song.add("Narda");
+        Song.add("Magbalik");
+        Song.add("Raining in Manila");
+        Song.add("Candy Paint");
+        Song.add("Alapaap");
+        
+        
+        Artist.add("Kamikazee");
+        Artist.add("Callalily");
+        Artist.add("Lola Amour");
+        Artist.add("Post Malone");
+        Artist.add("Eraser Heads");
+        
+     
+        
+        Album.add(Song.get(0)+ "/ " + Artist.get(0));
+        Album.add(Song.get(1)+ "/ " + Artist.get(1));
+        Album.add(Song.get(2)+ "/ " + Artist.get(2));
+        Album.add(Song.get(3)+ "/ " + Artist.get(3));
+        Album.add(Song.get(4)+ "/ " + Artist.get(4));
+        
+       
+        System.out.printf("%-20s %-20s %-20s\n", "Song", "Artist", "Album");
+        System.out.printf("%-20s %-20s %-20s\n", Song.get(0), Artist.get(0), Album.get(0));
+        System.out.printf("%-20s %-20s %-20s\n", Song.get(1), Artist.get(1), Album.get(1));
+        System.out.printf("%-20s %-20s %-20s\n", Song.get(2), Artist.get(2), Album.get(2));
+        System.out.printf("%-20s %-20s %-20s\n", Song.get(3), Artist.get(3), Album.get(3));
+        System.out.printf("%-20s %-20s %-20s\n", Song.get(4), Artist.get(4), Album.get(4));
+        
+        
+        combine(Song.listIterator(), Artist.listIterator(), Album.listIterator());
+        
+ } 
+ 
+ public static void combine(Iterator<String> Songs, Iterator<String> Artist, Iterator<String> Album){
+     
+     while( Songs.hasNext() && Artist.hasNext() && Album.hasNext()){
+         System.out.println("");
+         System.out.println(Songs.next() + " - " + Artist.next() + " - " + Album.next());
+     }
+ }
+}
+ 
